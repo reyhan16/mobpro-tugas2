@@ -74,16 +74,43 @@ class _MyHomePageState extends State<MyHomePage> {
                                   ),
                                   const Padding(
                                       padding:
-                                          EdgeInsets.only(top: 6, bottom: 6)),
+                                          EdgeInsets.only(top: 12, bottom: 6)),
                                   const Text(
                                       "Tugas 1 Praktikum Mobile Programming"),
                                   const Text("Adam Najmi Zidan - 065119079"),
                                   const Padding(
                                       padding:
-                                          EdgeInsets.only(top: 6, bottom: 6)),
-                                  const OutlinedButton(
-                                    onPressed: _launchURL,
-                                    child: Text('GitHub'),
+                                          EdgeInsets.only(top: 6, bottom: 12)),
+                                  Row(
+                                    children: [
+                                      const ElevatedButton(
+                                        onPressed: _launchURL,
+                                        child: Text('Repo'),
+                                      ),
+                                      const Padding(
+                                          padding: EdgeInsets.only(
+                                              left: 3, right: 3)),
+                                      ElevatedButton(
+                                        onPressed: () => showDialog(
+                                            context: context,
+                                            builder: (BuildContext context) =>
+                                                AlertDialog(
+                                                  title: const Text('Hi!'),
+                                                  content: const Text(
+                                                      'Hi Ka Amal dan Kak Sandy!!'),
+                                                  actions: <Widget>[
+                                                    TextButton(
+                                                        onPressed: () =>
+                                                            Navigator.pop(
+                                                                context,
+                                                                'Tutup'),
+                                                        child:
+                                                            const Text('Tutup'))
+                                                  ],
+                                                )),
+                                        child: const Text("Greeting"),
+                                      )
+                                    ],
                                   ),
                                 ],
                               )))
