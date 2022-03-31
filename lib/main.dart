@@ -117,7 +117,9 @@ class _MyHomePageState extends State<MyHomePage> {
                       const Text(
                         "Adam Najmi Zidan",
                         style: TextStyle(
-                            fontSize: 24, fontWeight: FontWeight.bold),
+                            fontSize: 24,
+                            fontFamily: "Montserrat",
+                            fontWeight: FontWeight.w600),
                       ),
                       const Padding(
                           padding: EdgeInsets.only(top: 3, bottom: 3)),
@@ -127,78 +129,8 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                       const Padding(
                           padding: EdgeInsets.only(top: 6, bottom: 6)),
-                      Card(
-                          elevation: 3,
-                          color: const Color(0xff448AFF),
-                          child: Container(
-                              width: 320,
-                              padding: const EdgeInsets.all(24),
-                              child: Row(
-                                children: [
-                                  const Icon(
-                                    Icons.perm_identity_outlined,
-                                    color: Colors.white,
-                                  ),
-                                  const Padding(
-                                      padding: EdgeInsets.only(right: 24)),
-                                  Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: const [
-                                      Text(
-                                        "Nomor Pokok Mahasiswa",
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 14,
-                                            fontWeight: FontWeight.bold),
-                                      ),
-                                      Padding(
-                                          padding: EdgeInsets.only(
-                                              top: 3, bottom: 3)),
-                                      Text(
-                                        "065119079",
-                                        style: TextStyle(color: Colors.white),
-                                      ),
-                                    ],
-                                  )
-                                ],
-                              ))),
-                      Card(
-                          elevation: 3,
-                          color: const Color(0xff448AFF),
-                          child: Container(
-                              width: 320,
-                              padding: const EdgeInsets.all(24),
-                              child: Row(
-                                children: [
-                                  const Icon(
-                                    Icons.verified_user_outlined,
-                                    color: Colors.white,
-                                  ),
-                                  const Padding(
-                                      padding: EdgeInsets.only(right: 24)),
-                                  Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: const [
-                                      Text(
-                                        "Program Studi",
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 14,
-                                            fontWeight: FontWeight.bold),
-                                      ),
-                                      Padding(
-                                          padding: EdgeInsets.only(
-                                              top: 3, bottom: 3)),
-                                      Text(
-                                        "Ilmu Komputer",
-                                        style: TextStyle(color: Colors.white),
-                                      ),
-                                    ],
-                                  )
-                                ],
-                              ))),
+                      const HomeCard(),
+                      const HomeCard(),
                       Card(
                           elevation: 3,
                           color: const Color(0xff448AFF),
@@ -251,6 +183,48 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ],
               ),
+            )));
+  }
+}
+
+class HomeCard extends StatelessWidget {
+  const HomeCard({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+        elevation: 3,
+        color: const Color(0xff448AFF),
+        child: Container(
+            width: 320,
+            padding: const EdgeInsets.all(24),
+            child: Row(
+              children: [
+                const Icon(
+                  Icons.perm_identity_outlined,
+                  color: Colors.white,
+                ),
+                const Padding(padding: EdgeInsets.only(right: 24)),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: const [
+                    Text(
+                      "Nomor Pokok Mahasiswa",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 14,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    Padding(padding: EdgeInsets.only(top: 3, bottom: 3)),
+                    Text(
+                      "065119079",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ],
+                )
+              ],
             )));
   }
 }
