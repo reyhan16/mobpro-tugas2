@@ -68,7 +68,11 @@ class _MyHomePageState extends State<MyHomePage> {
                   );
                 },
               ),
-              title: const Text('Profil saya'),
+              title: const Text(
+                'Profil saya',
+                style: TextStyle(
+                    fontFamily: "Montserrat", fontWeight: FontWeight.w600),
+              ),
               centerTitle: true,
               elevation: 0,
               actions: [
@@ -77,7 +81,12 @@ class _MyHomePageState extends State<MyHomePage> {
                     showDialog(
                         context: context,
                         builder: (BuildContext context) => AlertDialog(
-                              title: const Text('Tentang aplikasi'),
+                              title: const Text(
+                                'Tentang aplikasi',
+                                style: TextStyle(
+                                    fontFamily: "Montserrat",
+                                    fontWeight: FontWeight.w600),
+                              ),
                               content: const Text(
                                   'Ini adalah improved version dari https://github.com/kodeaqua/prak-mobpro-tugas1'),
                               actions: [
@@ -108,7 +117,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           borderRadius: BorderRadius.circular(64),
                         ),
                         child: const CircleAvatar(
-                          backgroundImage: AssetImage('assets/images/me.png'),
+                          backgroundImage: AssetImage('images/me.png'),
                           maxRadius: 60,
                         ),
                       ),
