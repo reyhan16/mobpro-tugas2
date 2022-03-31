@@ -103,94 +103,97 @@ class _MyHomePageState extends State<MyHomePage> {
               ],
             ),
             backgroundColor: Colors.white,
-            body: Center(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      const Padding(padding: EdgeInsets.only(top: 32)),
-                      Card(
-                        elevation: 3,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(64),
-                        ),
-                        child: const CircleAvatar(
-                          backgroundImage: AssetImage('images/me.png'),
-                          maxRadius: 60,
-                        ),
-                      ),
-                      const Padding(
-                          padding: EdgeInsets.only(top: 6, bottom: 6)),
-                      const Text(
-                        "Adam Najmi Zidan",
-                        style: TextStyle(
-                            fontSize: 24,
-                            fontFamily: "Montserrat",
-                            fontWeight: FontWeight.w600),
-                      ),
-                      const Padding(
-                          padding: EdgeInsets.only(top: 3, bottom: 3)),
-                      const Text(
-                        "adam.065119079@unpak.ac.id",
-                        style: TextStyle(fontSize: 14, color: Colors.grey),
-                      ),
-                      const Padding(
-                          padding: EdgeInsets.only(top: 6, bottom: 6)),
-                      const HomeCard(),
-                      const HomeCard(),
-                      Card(
+            body: SingleChildScrollView(
+              child: Center(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        const Padding(padding: EdgeInsets.only(top: 32)),
+                        Card(
                           elevation: 3,
-                          color: const Color(0xff448AFF),
-                          child: Container(
-                              width: 320,
-                              padding: const EdgeInsets.all(24),
-                              child: Row(
-                                children: [
-                                  const Icon(
-                                    Icons.storage_outlined,
-                                    color: Colors.white,
-                                  ),
-                                  const Padding(
-                                      padding: EdgeInsets.only(right: 24)),
-                                  Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      const Text(
-                                        "GitHub",
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 14,
-                                            fontWeight: FontWeight.bold),
-                                      ),
-                                      const Padding(
-                                          padding: EdgeInsets.only(
-                                              top: 3, bottom: 3)),
-                                      const Text(
-                                        "https://github.com/kodeaqua",
-                                        style: TextStyle(color: Colors.white),
-                                      ),
-                                      const Padding(
-                                          padding: EdgeInsets.only(
-                                              top: 3, bottom: 3)),
-                                      ElevatedButton(
-                                        onPressed: _launchURL,
-                                        child: const Text(
-                                          'Repositori',
-                                          style: TextStyle(color: Colors.black),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(64),
+                          ),
+                          child: const CircleAvatar(
+                            backgroundImage: AssetImage('images/me.png'),
+                            maxRadius: 60,
+                          ),
+                        ),
+                        const Padding(
+                            padding: EdgeInsets.only(top: 6, bottom: 6)),
+                        const Text(
+                          "Adam Najmi Zidan",
+                          style: TextStyle(
+                              fontSize: 24,
+                              fontFamily: "Montserrat",
+                              fontWeight: FontWeight.w600),
+                        ),
+                        const Padding(
+                            padding: EdgeInsets.only(top: 3, bottom: 3)),
+                        const Text(
+                          "adam.065119079@unpak.ac.id",
+                          style: TextStyle(fontSize: 14, color: Colors.grey),
+                        ),
+                        const Padding(
+                            padding: EdgeInsets.only(top: 6, bottom: 6)),
+                        const HomeCard(),
+                        const HomeCard(),
+                        Card(
+                            elevation: 3,
+                            color: const Color(0xff448AFF),
+                            child: Container(
+                                width: 320,
+                                padding: const EdgeInsets.all(24),
+                                child: Row(
+                                  children: [
+                                    const Icon(
+                                      Icons.storage_outlined,
+                                      color: Colors.white,
+                                    ),
+                                    const Padding(
+                                        padding: EdgeInsets.only(right: 24)),
+                                    Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        const Text(
+                                          "GitHub",
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 14,
+                                              fontWeight: FontWeight.bold),
                                         ),
-                                        style: ElevatedButton.styleFrom(
-                                            primary: Colors.white),
-                                      )
-                                    ],
-                                  )
-                                ],
-                              ))),
-                    ],
-                  ),
-                ],
+                                        const Padding(
+                                            padding: EdgeInsets.only(
+                                                top: 3, bottom: 3)),
+                                        const Text(
+                                          "https://github.com/kodeaqua",
+                                          style: TextStyle(color: Colors.white),
+                                        ),
+                                        const Padding(
+                                            padding: EdgeInsets.only(
+                                                top: 3, bottom: 3)),
+                                        ElevatedButton(
+                                          onPressed: _launchURL,
+                                          child: const Text(
+                                            'Repositori',
+                                            style:
+                                                TextStyle(color: Colors.black),
+                                          ),
+                                          style: ElevatedButton.styleFrom(
+                                              primary: Colors.white),
+                                        )
+                                      ],
+                                    )
+                                  ],
+                                ))),
+                      ],
+                    ),
+                  ],
+                ),
               ),
             )));
   }
