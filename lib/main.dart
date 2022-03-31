@@ -172,6 +172,24 @@ class _MyHomePageState extends State<MyHomePage> {
                                           style: TextStyle(color: Colors.white),
                                         ),
                                       ],
+                                    ),
+                                    const Padding(
+                                        padding: EdgeInsets.only(left: 12)),
+                                    IconButton(
+                                      icon: const Icon(
+                                        Icons.copy_outlined,
+                                        color: Colors.white,
+                                      ),
+                                      tooltip: "Salin NPM",
+                                      onPressed: () {
+                                        Fluttertoast.showToast(
+                                            msg: "NPM berhasil disalin!",
+                                            toastLength: Toast.LENGTH_SHORT,
+                                            gravity: ToastGravity.BOTTOM,
+                                            timeInSecForIosWeb: 1,
+                                            textColor: Colors.white,
+                                            fontSize: 16.0);
+                                      },
                                     )
                                   ],
                                 ))),
