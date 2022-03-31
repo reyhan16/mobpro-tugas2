@@ -1,16 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-
-const String _github = "https://github.com/kodeaqua/mobpro-tugas2";
 
 void main() {
   runApp(const MyApp());
-}
-
-void _launchURL() async {
-  await launch(_github);
 }
 
 class MyApp extends StatelessWidget {
@@ -88,7 +81,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                     fontWeight: FontWeight.w600),
                               ),
                               content: const Text(
-                                  'Ini adalah improved version dari https://github.com/kodeaqua/prak-mobpro-tugas1'),
+                                  'Untuk Memenuhi Tugas Mobile Programming, Link Github : '),
                               actions: [
                                 TextButton(
                                     onPressed: () =>
@@ -125,7 +118,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         const Padding(
                             padding: EdgeInsets.only(top: 6, bottom: 6)),
                         const Text(
-                          "Adam Najmi Zidan",
+                          "Reyhan Nazera Rusmana",
                           style: TextStyle(
                               fontSize: 24,
                               fontFamily: "Montserrat",
@@ -134,14 +127,14 @@ class _MyHomePageState extends State<MyHomePage> {
                         const Padding(
                             padding: EdgeInsets.only(top: 3, bottom: 3)),
                         const Text(
-                          "adam.065119079@unpak.ac.id",
+                          "reyhan.065119099@unpak.ac.id",
                           style: TextStyle(fontSize: 14, color: Colors.grey),
                         ),
                         const Padding(
                             padding: EdgeInsets.only(top: 6, bottom: 6)),
                         Card(
                             elevation: 3,
-                            color: const Color(0xff448AFF),
+                            color: Color.fromARGB(255, 117, 87, 153),
                             child: Container(
                                 width: 320,
                                 padding: const EdgeInsets.all(24),
@@ -168,7 +161,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                             padding: EdgeInsets.only(
                                                 top: 3, bottom: 3)),
                                         Text(
-                                          "065119079",
+                                          "065119099",
                                           style: TextStyle(color: Colors.white),
                                         ),
                                       ],
@@ -195,7 +188,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                 ))),
                         Card(
                             elevation: 3,
-                            color: const Color(0xff448AFF),
+                            color: Color.fromARGB(255, 117, 87, 153),
                             child: Container(
                                 width: 320,
                                 padding: const EdgeInsets.all(24),
@@ -203,6 +196,42 @@ class _MyHomePageState extends State<MyHomePage> {
                                   children: [
                                     const Icon(
                                       Icons.verified_user_outlined,
+                                      color: Colors.white,
+                                    ),
+                                    const Padding(
+                                        padding: EdgeInsets.only(right: 24)),
+                                    Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: const [
+                                        Text(
+                                          "Status Keaktifan",
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 14,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                        Padding(
+                                            padding: EdgeInsets.only(
+                                                top: 3, bottom: 3)),
+                                        Text(
+                                          "Aktif",
+                                          style: TextStyle(color: Colors.white),
+                                        ),
+                                      ],
+                                    )
+                                  ],
+                                ))),
+                        Card(
+                            elevation: 3,
+                            color: Color.fromARGB(255, 117, 87, 153),
+                            child: Container(
+                                width: 320,
+                                padding: const EdgeInsets.all(24),
+                                child: Row(
+                                  children: [
+                                    const Icon(
+                                      Icons.school_outlined,
                                       color: Colors.white,
                                     ),
                                     const Padding(
@@ -231,14 +260,14 @@ class _MyHomePageState extends State<MyHomePage> {
                                 ))),
                         Card(
                             elevation: 3,
-                            color: const Color(0xff448AFF),
+                            color: Color.fromARGB(255, 117, 87, 153),
                             child: Container(
                                 width: 320,
                                 padding: const EdgeInsets.all(24),
                                 child: Row(
                                   children: [
                                     const Icon(
-                                      Icons.storage_outlined,
+                                      Icons.class__outlined,
                                       color: Colors.white,
                                     ),
                                     const Padding(
@@ -246,34 +275,21 @@ class _MyHomePageState extends State<MyHomePage> {
                                     Column(
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
-                                      children: [
-                                        const Text(
-                                          "GitHub",
+                                      children: const [
+                                        Text(
+                                          "Jenjang Pendidikan",
                                           style: TextStyle(
                                               color: Colors.white,
                                               fontSize: 14,
                                               fontWeight: FontWeight.bold),
                                         ),
-                                        const Padding(
+                                        Padding(
                                             padding: EdgeInsets.only(
                                                 top: 3, bottom: 3)),
-                                        const Text(
-                                          "https://github.com/kodeaqua",
+                                        Text(
+                                          "S1",
                                           style: TextStyle(color: Colors.white),
                                         ),
-                                        const Padding(
-                                            padding: EdgeInsets.only(
-                                                top: 3, bottom: 3)),
-                                        ElevatedButton(
-                                          onPressed: _launchURL,
-                                          child: const Text(
-                                            'Repositori',
-                                            style:
-                                                TextStyle(color: Colors.black),
-                                          ),
-                                          style: ElevatedButton.styleFrom(
-                                              primary: Colors.white),
-                                        )
                                       ],
                                     )
                                   ],
